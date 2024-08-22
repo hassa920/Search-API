@@ -6,7 +6,7 @@ app.get("/",(req,res)=>{
     res.send("Hi there")
 })
 
-app.use("/api/products",products_routes)
+app.use("/api/result",products_routes)
 
 app.listen(PORT,()=>{
     console.log(`Connection is established at port number ${PORT}`)

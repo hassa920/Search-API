@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Load the products data from the JSON file
-const productsFilePath = path.join(__dirname, '../products.json');
+const productsFilePath = path.join(__dirname, '../data.json');
 const productsData = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 
 const getProducts= async (req,res)=>{
@@ -23,8 +23,8 @@ const searchProducts = async (req, res) => {
     }
     
     // Filter products by checking if the product title includes the search term
-    const results = productsData.products.filter(product =>
-        product.title && product.title.toLowerCase().includes(searchTerm.toLowerCase())
+    const results = productsData.filter(data =>
+        data. fulladdress && data. fulladdress.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     // Respond with the filtered results
